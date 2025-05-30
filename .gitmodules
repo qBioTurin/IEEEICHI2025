@@ -1,3 +1,8 @@
 [submodule "Micro/FORGE4FLAME"]
 	path = Micro/FORGE4FLAME
 	url = https://github.com/qBioTurin/FORGE4FLAME
+
+[submodule "Macro/SIR"]
+	path = Macro/SIR
+	url = https://github.com/qBioTurin/SIR
+
