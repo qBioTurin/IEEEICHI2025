@@ -6,9 +6,12 @@ renv::rebuild("epimod", recursive = TRUE)
 
 downloadContainers()
 
+
 start_time <- Sys.time()
 model.generation(net_fname = "./Net/SIR.PNPRO")
 end_time <- Sys.time()-start_time
+
+source("Rfunction/ModelAnalysisPlot.R")
 
 ### Model Analysis
 # Deterministic:
@@ -16,11 +19,10 @@ end_time <- Sys.time()-start_time
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis.csv",
                solver_type = "LSODA",
-               f_time = 7*10, # weeks
+               f_time = 200, 
                s_time = 1
 )
 
-source("Rfunction/ModelAnalysisPlot.R")
 
 AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
@@ -29,7 +31,7 @@ AnalysisPlot$plAll
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
                solver_type = "LSODA",
-               f_time = 7*10, # weeks
+               f_time = 200, 
                s_time = 1
 )
 
@@ -45,9 +47,10 @@ model.analysis(solver_fname = "SIR.solver",
                solver_type = "SSA",
                n_run = 500,
                parallel_processors = 2,
-               f_time = 7*10, # weeks
+               f_time = 200, 
                s_time = 1
 )
+
 
 AnalysisPlot = ModelAnalysisPlot(Stoch = T ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
@@ -60,7 +63,7 @@ model.analysis(solver_fname = "SIR.solver",
                solver_type = "SSA",
                n_run = 500,
                parallel_processors = 2,
-               f_time = 7*10, # weeks
+               f_time = 200,
                s_time = 1
 )
 
