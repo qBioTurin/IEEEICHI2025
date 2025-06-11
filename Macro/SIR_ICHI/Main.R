@@ -1,5 +1,3 @@
-library(epimod)
-
 library(devtools)
 install_github("https://github.com/qBioTurin/epimod", ref="master", force = TRUE)
 library(epimod)
@@ -29,7 +27,36 @@ AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
 AnalysisPlot$plAll
 
 model.analysis(solver_fname = "SIR.solver",
+               parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
+               solver_type = "LSODA",
+               f_time = 7*10, # weeks
+               s_time = 1
+)
+
+AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
+                                 trace_path = "./SIR_analysis/SIR-analysis-1.trace")
+AnalysisPlot$plAll
+
+##Stochastic
+
+
+model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis.csv",
+               solver_type = "SSA",
+               n_run = 500,
+               parallel_processors = 2,
+               f_time = 7*10, # weeks
+               s_time = 1
+)
+
+AnalysisPlot = ModelAnalysisPlot(Stoch = T ,print = F,
+                                 trace_path = "./SIR_analysis/SIR-analysis-1.trace")
+
+AnalysisPlot$plAll
+AnalysisPlot$plAllMean 
+
+model.analysis(solver_fname = "SIR.solver",
+               parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
                solver_type = "SSA",
                n_run = 500,
                parallel_processors = 2,
