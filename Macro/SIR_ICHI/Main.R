@@ -1,4 +1,5 @@
 library(devtools)
+install.packages("fdatest")
 install_github("https://github.com/qBioTurin/epimod", ref="master", force = TRUE)
 library(epimod)
 
