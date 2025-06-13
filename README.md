@@ -3,7 +3,9 @@ Repository used for the tutorial "Epidemic Modelling Frameworks for Studying Inf
 
 ## TO CLONE THE REPOSITORY
 
+```
 git clone git@github.com:qBioTurin/IEEEICHI2025.git
+```
 
 ### Contents
 
