@@ -12,10 +12,15 @@ git clone git@github.com:qBioTurin/IEEEICHI2025.git
 **Macro:**
 In this directory, you find:
 -  A PDF with the instructions to install GreatSPN [1] on your PC, depending on the operating system.
--  The SIR (Susceptible-Infected-Recovered) model used with GreatMod [2]. In the ReadME file, you will find a description of the model. 
+-  The SIR (Susceptible-Infected-Recovered) model used with Epimod [2]. In the ReadME file, you will find a description of the model. 
 
 **Micro:**
 In this directory, you will find the examples we use in the tutorial, as well as a user guide with all the details of the application [3].
+
+### Repositories
+Epimod: https://github.com/qBioTurin/epimod
+
+Forge4Flame: https://github.com/qBioTurin/FORGE4FLAME 
 
 ## REFERENCES
 [1] Castagno, P., et al. A computational framework for modeling and studying pertussis epidemiology and vaccination. BMC Bioinformatics 21 (Suppl 8), 344 (2020). doi: https://doi.org/10.1186/s12859-020-03648-6.
