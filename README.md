@@ -9,12 +9,12 @@ git clone https://github.com/qBioTurin/IEEEICHI2025.git
 
 ### Contents
 
-**Macro:**
+**Macro**
 In this directory, you find:
 -  A PDF with the instructions to install GreatSPN [1] on your PC, depending on the operating system.
 -  The SIR (Susceptible-Infected-Recovered) model used with Epimod [2]. In the README file, you will find a description of the model. 
 
-**Micro:**
+**Micro**
 In this directory, you will find the examples we use in the tutorial, as well as a user guide with all the details of the application [3].
 
 ### Repositories
