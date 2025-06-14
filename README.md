@@ -27,7 +27,7 @@ Forge4Flame: https://github.com/qBioTurin/FORGE4FLAME
 
 [2] Babar J, et al. GreatSPN enhanced with decision diagram data structures. In: Application and Theory of Petri Nets.PETRI NETS 2010, LNCS. Springer: 2010. p. 308–17. doi: https://doi.org/10.1007/978-3-642-13675-7_19.
 
-[3] Baccega, Daniele, et al. "Forge4Flame: An Intuitive Dashboard for Designing GPU Agent-Based Models to Simulate Infectious Disease Spread." Available at SSRN 5194584. doi: http://dx.doi.org/10.2139/ssrn.5194584.
+[3] Baccega, D., et al. "Forge4Flame: An Intuitive Dashboard for Designing GPU Agent-Based Models to Simulate Infectious Disease Spread." Available at SSRN 5194584. doi: http://dx.doi.org/10.2139/ssrn.5194584.
 
 ## COPYRIGHT AND LICENSE
 Copyright _Daniele Baccega, Marco Beccuti, Simone Pernice, Irene Terrone_
