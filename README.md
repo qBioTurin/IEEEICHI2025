@@ -4,7 +4,7 @@ Repository used for the tutorial "Epidemic Modelling Frameworks for Studying Inf
 ## TO CLONE THE REPOSITORY
 
 ```
-git clone git@github.com:qBioTurin/IEEEICHI2025.git
+git clone https://github.com/qBioTurin/IEEEICHI2025.git
 ```
 
 ### Contents
@@ -12,7 +12,7 @@ git clone git@github.com:qBioTurin/IEEEICHI2025.git
 **Macro:**
 In this directory, you find:
 -  A PDF with the instructions to install GreatSPN [1] on your PC, depending on the operating system.
--  The SIR (Susceptible-Infected-Recovered) model used with Epimod [2]. In the ReadME file, you will find a description of the model. 
+-  The SIR (Susceptible-Infected-Recovered) model used with Epimod [2]. In the README file, you will find a description of the model. 
 
 **Micro:**
 In this directory, you will find the examples we use in the tutorial, as well as a user guide with all the details of the application [3].
