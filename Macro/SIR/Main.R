@@ -1,8 +1,11 @@
 #install library
+library(devtools)
 install_github("https://github.com/qBioTurin/epimod", ref="master", force = TRUE)
 library(epimod)
 
 downloadContainers()
+
+setwd("./IEEEICHI2025/Macro/SIR/")
 
 #generate model
 start_time <- Sys.time()
@@ -16,17 +19,18 @@ end_time <- Sys.time()-start_time
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis.csv",
                solver_type = "LSODA",
-               f_time = 100, 
+               f_time = 200, 
                s_time = 1
 )
 
-#generate plot for model determistic analysis
+#generate plot for model deterministic analysis
 source("Rfunction/ModelAnalysisPlot.R")
 
 AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
 AnalysisPlot$plAll
 
+#deterministic analysis with less infection
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
                solver_type = "LSODA",
@@ -39,8 +43,6 @@ AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
 AnalysisPlot$plAll
 
 ##Stochastic analysis
-
-
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis.csv",
                solver_type = "SSA",
