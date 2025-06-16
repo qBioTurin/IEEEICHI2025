@@ -84,7 +84,7 @@ ModelAnalysisPlot=function(trace_path,Stoch = F,print=T){
       geom_line(data=meanTrace.final,
                 aes(x=Time,y=V,col=Compartment),
                 linetype="dashed")+
-      scale_color_manual(values = c("green", "red", "blue"))+
+      scale_color_manual(values = c("green", "red", "purple"))+
       theme(axis.text=element_text(size=18),
             axis.title=element_text(size=20,face="bold"),
             legend.text=element_text(size=18),
@@ -150,7 +150,7 @@ ModelAnalysisPlot=function(trace_path,Stoch = F,print=T){
     plAll <-ggplot( )+
       geom_line(data=trace.final,
                 aes(x=Time,y=V,col=Compartment))+
-      scale_color_manual(values = c("green", "red", "blue"))+
+      scale_color_manual(values = c("green", "red", "purple"))+
       theme(axis.text=element_text(size=18),
             axis.title=element_text(size=20,face="bold"),
             legend.text=element_text(size=18),
