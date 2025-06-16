@@ -7,7 +7,7 @@ Repository used for the tutorial "Epidemic Modelling Frameworks for Studying Inf
 git clone https://github.com/qBioTurin/IEEEICHI2025.git
 ```
 
-### Contents
+## CONTENTS
 The slides used during the tutorial session are located in the main directory (Slides.pdf).
 
 **Macro**  
@@ -23,7 +23,7 @@ This directory includes:
 **From Macro to Micro**  
 This directory contains the examples presented during the tutorial session, illustrating the connection between macro- and micro-level models.
 
-### Repositories
+## REPOSITORIES
 Epimod: https://github.com/qBioTurin/epimod
 
 Forge4Flame: https://github.com/qBioTurin/FORGE4FLAME 
