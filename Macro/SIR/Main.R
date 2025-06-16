@@ -74,9 +74,25 @@ AnalysisPlot = ModelAnalysisPlot(Stoch = T ,print = F,
 AnalysisPlot$plAll
 AnalysisPlot$plAllMean 
 
+
 #generate file for Forge4Flame
+model.analysis(solver_fname = "SIR.solver",
+               parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
+               solver_type = "SSA",
+               parallel_processors = 2,
+               f_time = 200,
+               s_time = 1
+)
+
+AnalysisPlot = ModelAnalysisPlot(Stoch = T ,print = F,
+                                 trace_path = "./SIR_analysis/SIR-analysis-1.trace")
+
+AnalysisPlot$plAll
+AnalysisPlot$plAllMean 
+
 source("Rfunction/analyze_SIR_data.R")
 
 analyze_SIR_data(file_path ="SIR_analysis/SIR-analysis-1.trace", appendix = "data", path_save = "SIR_analysis/")
+
 
 

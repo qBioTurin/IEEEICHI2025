@@ -65,10 +65,15 @@ ModelAnalysisPlot=function(trace_path,Stoch = F,print=T){
     
     plAll <-ggplot( )+
       geom_line(data=trace.final,
-                aes(x=Time,y=V,group=ID))+
+                aes(x=Time,y=V,group=ID),
+                alpha = 0.5)+
       geom_line(data=meanTrace.final,
                 aes(x=Time,y=V,col="Mean"),
                 linetype="dashed")+
+      scale_color_manual(
+        values = c("S" = "green", "I" = "red", "R" = "purple"),
+        name = "Mean"
+      ) +
       facet_grid(~Compartment)+
       theme(axis.text=element_text(size=15),
             axis.title=element_text(size=15,face="bold"),
