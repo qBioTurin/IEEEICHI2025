@@ -1,30 +1,37 @@
-# IEEEICHI2025
-Repository for macro and micro simulation for the ICHI conference 2025.
+# IEEE ICHI 2025
+Repository used for the tutorial "Epidemic Modelling Frameworks for Studying Infectious Disease Dynamics" at the IEEE ICHI 2025 conference.
 
 ## TO CLONE THE REPOSITORY
 
-git clone  [URL of the repo]
-
-### In the repository
-
-In this repository you will find:
-
-**Macro:**
-In this directory there is:
--   A pdf with the instruction to install GreatSPN on your PC depending on the operating system.
--  The SIR (Susceptible Infected Recovered) model. In the ReadME file you will find a description of the model. 
-
-
-**Micro:**
-In this directory there are the example we will use in this tutorial and a presentation of all the details of the application.
-
-## Docker Compose
-
-To use both the application of this tutorial (F4F and FLAME GPU 2) you must utilize Docker Compose. The user must download the YAML file [here](https://github.com/qBioTurin/FORGE4FLAME/blob/main/inst/Compose/docker-compose.yml). To start both F4F and FLAME GPU 2 containers, navigate to the directory containing the YAML file and run the following Bash command; if running on a server, ensure that port 3839 is exposed and accessible via http://<server-hostname>:3839; if running locally, access to http://localhost:3839.
 ```
-docker compose up -d --build
+git clone https://github.com/qBioTurin/IEEEICHI2025.git
 ```
-To run a FLAME GPU 2 simulation using Docker Compose, the user must use the Run page of F4F. Results will be saved in a directory named `results/NameOfTheModel` within the current directory, where \texttt{NameOfTheModel} is the name selected by the user when clicking on the *Run* button in the **Run** page. To stop the containers, run the following Bash command:
-```
-docker compose down
-```
+
+### Contents
+
+**Macro**
+In this directory, you find:
+-  A PDF with the instructions to install GreatSPN [1] on your PC, depending on the operating system.
+-  The SIR (Susceptible-Infected-Recovered) model used with Epimod [2]. In the README file, you will find a description of the model. 
+
+**Micro**
+In this directory, you will find the examples we use in the tutorial, as well as a user guide with all the details of the application [3].
+
+### Repositories
+Epimod: https://github.com/qBioTurin/epimod
+
+Forge4Flame: https://github.com/qBioTurin/FORGE4FLAME 
+
+## REFERENCES
+[1] Castagno, P., et al. A computational framework for modeling and studying pertussis epidemiology and vaccination. BMC Bioinformatics 21 (Suppl 8), 344 (2020). doi: https://doi.org/10.1186/s12859-020-03648-6.
+
+[2] Babar J, et al. GreatSPN enhanced with decision diagram data structures. In: Application and Theory of Petri Nets.PETRI NETS 2010, LNCS. Springer: 2010. p. 308–17. doi: https://doi.org/10.1007/978-3-642-13675-7_19.
+
+[3] Baccega, D., et al. "Forge4Flame: An Intuitive Dashboard for Designing GPU Agent-Based Models to Simulate Infectious Disease Spread." Available at SSRN 5194584. doi: http://dx.doi.org/10.2139/ssrn.5194584.
+
+## COPYRIGHT AND LICENSE
+Copyright _Daniele Baccega, Marco Beccuti, Simone Pernice, Irene Terrone_
+
+![CC BY-NC-SA 3.0](http://ccl.northwestern.edu/images/creativecommons/byncsa.png)
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 License.  To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
