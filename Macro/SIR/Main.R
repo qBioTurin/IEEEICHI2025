@@ -1,40 +1,46 @@
-#install library
+# Install the epimod library
 library(devtools)
 install_github("https://github.com/qBioTurin/epimod", ref="master", force = TRUE)
+
 library(epimod)
 
 downloadContainers()
 
-setwd("./IEEEICHI2025/Macro/SIR/")
+setwd("~/IEEEICHI2025/Macro/SIR/")
 
-#generate model
+
+
+
+# Generate the model
 start_time <- Sys.time()
 model.generation(net_fname = "./Net/SIR.PNPRO")
 end_time <- Sys.time()-start_time
 
 
+
+
 ### Model Analysis
-# Deterministic:
+#   Deterministic:
 
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis.csv",
                solver_type = "LSODA",
-               f_time = 200, 
+               f_time = 200,
                s_time = 1
 )
 
-#generate plot for model deterministic analysis
+# Generate plot for deterministic model analysis
 source("Rfunction/ModelAnalysisPlot.R")
 
 AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
 AnalysisPlot$plAll
 
-#deterministic analysis with less infection
+# Deterministic analysis with lower infection rate
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
                solver_type = "LSODA",
-               f_time = 200, 
+               f_time = 200,
                s_time = 1
 )
 
@@ -42,22 +48,25 @@ AnalysisPlot = ModelAnalysisPlot(Stoch = F ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
 AnalysisPlot$plAll
 
-##Stochastic analysis
+
+
+
+#   Stochastic:
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis.csv",
                solver_type = "SSA",
                n_run = 500,
                parallel_processors = 2,
-               f_time = 200, 
+               f_time = 200,
                s_time = 1
 )
 
-#generate plot for model stochastic analysis
+# Generate plot for stochastic model analysis
 AnalysisPlot = ModelAnalysisPlot(Stoch = T ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
 
 AnalysisPlot$plAll
-AnalysisPlot$plAllMean 
+AnalysisPlot$plAllMean
 
 model.analysis(solver_fname = "SIR.solver",
                parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
@@ -72,12 +81,12 @@ AnalysisPlot = ModelAnalysisPlot(Stoch = T ,print = F,
                                  trace_path = "./SIR_analysis/SIR-analysis-1.trace")
 
 AnalysisPlot$plAll
-AnalysisPlot$plAllMean 
-
+AnalysisPlot$plAllMean
 
 #generate file for Forge4Flame
+
 model.analysis(solver_fname = "SIR.solver",
-               parameters_fname = "Input/Functions_list_ModelAnalysis_v2.csv",
+               parameters_fname = "Input/Functions_list_ModelAnalysis_F4F.csv",
                solver_type = "SSA",
                parallel_processors = 2,
                f_time = 200,
@@ -93,6 +102,5 @@ AnalysisPlot$plAllMean
 source("Rfunction/analyze_SIR_data.R")
 
 analyze_SIR_data(file_path ="SIR_analysis/SIR-analysis-1.trace", appendix = "data", path_save = "SIR_analysis/")
-
 
 

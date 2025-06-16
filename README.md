@@ -7,17 +7,23 @@ Repository used for the tutorial "Epidemic Modelling Frameworks for Studying Inf
 git clone https://github.com/qBioTurin/IEEEICHI2025.git
 ```
 
-### Contents
+## CONTENTS
+The slides used during the tutorial session are located in the main directory (**Slides.pdf**).
 
-**Macro**
-In this directory, you find:
--  A PDF with the instructions to install GreatSPN [1] on your PC, depending on the operating system.
--  The SIR (Susceptible-Infected-Recovered) model used with Epimod [2]. In the README file, you will find a description of the model. 
+**Macro**  
+This directory contains:
+- A PDF with installation instructions for GreatSPN [1], tailored to your operating system.
+- The SIR (Susceptible-Infected-Recovered) compartmental model used with Epimod [2] during the tutorial session. A description of the model is provided in the accompanying README file.
 
-**Micro**
-In this directory, you will find the examples we use in the tutorial, as well as a user guide with all the details of the application [3].
+**Micro**  
+This directory includes:
+- The examples used in the tutorial session with Forge4Flame.
+- A comprehensive user guide detailing how to use the application [3].
 
-### Repositories
+**From Macro to Micro**  
+This directory contains the examples presented during the tutorial session, illustrating the connection between macro- and micro-level models.
+
+## REPOSITORIES
 Epimod: https://github.com/qBioTurin/epimod
 
 Forge4Flame: https://github.com/qBioTurin/FORGE4FLAME 
