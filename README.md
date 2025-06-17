@@ -8,7 +8,7 @@ git clone https://github.com/qBioTurin/IEEEICHI2025.git
 ```
 
 ## CONTENTS
-The slides used during the tutorial session are located in the main directory (**Slides.pdf**).
+The slides used during the tutorial session are located in the main directory (**Slides.pdf** and **Slides.pptx**).
 
 **Macro**  
 This directory contains:
