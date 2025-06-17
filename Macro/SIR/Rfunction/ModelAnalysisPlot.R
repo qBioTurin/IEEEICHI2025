@@ -4,10 +4,6 @@
   
   ModelAnalysisPlot=function(trace_path,Stoch = F,print=T){
     
-    Stoch = T
-    print = F
-    trace_path = "./SIR_analysis/SIR-analysis-1.trace"
-    
     trace <-read.csv(trace_path,sep = "")
     n_sim_tot<-table(trace$Time)
     n_sim <- n_sim_tot[1]
