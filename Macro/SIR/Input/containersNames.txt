@@ -1,0 +1,3 @@
+         'names'
+'generation' qbioturin/epimod-generation:latest
+'analysis' qbioturin/epimod-analysis:latest

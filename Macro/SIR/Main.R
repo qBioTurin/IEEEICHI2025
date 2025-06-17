@@ -4,11 +4,9 @@ install_github("https://github.com/qBioTurin/epimod", ref="master", force = TRUE
 
 library(epimod)
 
-downloadContainers()
-
 setwd("~/IEEEICHI2025/Macro/SIR/")
 
-
+downloadContainers("Input/containersNames.txt")
 
 
 # Generate the model
