@@ -4,7 +4,7 @@ install_github("https://github.com/qBioTurin/epimod", ref="master", force = TRUE
 
 library(epimod)
 
-downloadContainers()
+downloadContainers("Input/containersNames.txt")
 
 setwd("~/IEEEICHI2025/Macro/SIR/")
 
